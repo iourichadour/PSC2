@@ -1,0 +1,707 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <LINK REL="SHORTCUT ICON" HREF="https://www.pschrome.com/chrome/PSChrome2/PSChrome2.ico" />
+  
+  <style type="text/css" media="all">
+
+	body {
+		background: #FFF;
+		font: 0.8em arial, helvetica, sans-serif;
+		margin: 20px 10px 10px 10px;
+		padding: 0;
+	}
+    #tabContainer {
+        width:100%;
+    }
+	#header {
+        width:100%;
+        background-color:white;
+	}
+
+    #header ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		background: white;
+		float: left;
+		width: 100%;
+    }
+
+	#header li {
+		float: left;
+		margin: 0 1em 0 0;
+    }
+
+	#header a {
+		text-decoration: none;
+		display: inline-block;
+		//width: 10em;
+		padding: 0 0.5em;
+		font-weight: bold;
+		color: black;
+		border-bottom: 0.5em solid #fc6;
+		color: #fc6;
+    }
+
+	#header a:hover {
+		color: #fa3;
+		border-color: #fa3;
+	}
+
+	#header #selected a {
+		color: #f80;
+		border-color: #f80;
+	}
+
+
+	h1 {
+		margin: 0;
+		padding: 0.5em 0 1em 0.5em;
+		color: #f80;
+		font-size: 1.5em;
+		font-style: italic;
+	}
+    
+    .tab_pages { display:none; white-space:nowrap;}
+    .show { display: block; }
+    .hide { display: none; }
+
+    #page_info p { white-space:nowrap; }
+    
+    .indent { margin: 5px 5px 5px 25px; }
+    .Page_Options { margin: 10px 10px 10px 10px; display:none; }
+    .Page_Options div { margin: 5px 0px 5px 0x; }
+    
+    .logPreTags { font-size:12px;  }
+    
+    .menu {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 300px;
+        background-color: #c0c0c0;
+        height:100%;
+        overflow:scroll;
+		color: black;
+    }
+    .menu li {
+        padding: 2px;
+    }
+    
+    .menu a {
+		text-decoration: none;
+		font-weight: bold;
+		color: black;
+    }
+
+	.menu a:hover {
+		color: white;
+	}
+
+	.menu #selected a {
+		color: red;
+	}
+	
+	.content {
+        position:absolute;
+        left: 320px;
+        top: 0px;
+        width:650px;
+	}
+    
+     .sub_info {
+        margin: 0px 0px 0px 20px;
+     }
+     
+     #first_time {
+        color: black;
+        font-size: 30px;
+     }
+     #first_time h1{
+        color:blue;
+		font-style:normal;
+     }
+	 .fixed{ text-decoration: line-through; }
+    
+	</style>
+    <title>PSChrome 2.4.11 Features</title>
+    
+    <script>
+    
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-405173-30']);
+	_gaq.push(['_trackPageview']);
+    function Init()
+    {
+        if( document.location.toString().indexOf('pschrome.com') > -1 )
+        {
+            initGoogle();
+        }
+    }
+    /** Only load if needing to do an update    **/
+    function initGoogle()
+    {
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = 'https://ssl.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    }
+    </script>
+</head>
+<body onload='Init();'>
+
+<a name="top"/>
+<div class='content'>
+
+    <div id='first_time'>
+        <!--<h1 align=center>PSChrome Helper Extension</h1>-->
+        <p>Welcome to PSChrome <span id="version">2.4.11</span></p>
+    </div>
+    <p>PSChrome is a browser extension/add-on that works with both Google Chrome and Mozilla Firefox.  PSChrome adds usability features to enhance the user experience of both technical and functional users.  By adding visual tweeks and automating commons tasks, PSChrome will be a resource you won't want to live without.</p>
+    <h1>
+        <span style="color: #3366ff;"><a style="font-size: 13px;" title="Install PSChrome" onclick="_gaq.push(['_trackEvent','Extensions', 'Downloads','PSChrome Webstore']);" href="https://chrome.google.com/webstore/detail/cpgoncheakfjhldfbebekijoeaabnfeb"><span style="color: #3366ff;"><img alt="" src="https://www.pschrome.com/chrome/PSChrome2/images/chrome.png" border="0" height='80px'/></span></a>
+        <a style="font-size: 13px;" title="Install Mozilla Firefox" onclick="_gaq.push(['_trackEvent','Extensions', 'Downloads','PSChrome Mozilla']);" href="https://www.pschrome.com/chrome/PSChrome2/versions/pschromeforfirefox_2.4.10.9.xpi"><span style="color: #3366ff;"><img alt="" src="https://www.pschrome.com/chrome/PSChrome2/images/firefox.png" border="0"  height='80px' /></span></a></span>
+    </h1>
+    <a title="Install PSChrome" onclick="_gaq.push(['_trackEvent','Extensions', 'Downloads','PSChrome Webstore']);" href="https://chrome.google.com/webstore/detail/cpgoncheakfjhldfbebekijoeaabnfeb">Google Chrome</a> 
+    &nbsp;&nbsp;
+    <a title="Install Mozilla Firefox" onclick="_gaq.push(['_trackEvent','Extensions', 'Downloads','PSChrome Mozilla']);" href="https://www.pschrome.com/chrome/PSChrome2/versions/pschromeforfirefox_2.4.10.9.xpi">Mozilla Firefox</a>
+    
+	
+	https://docs.google.com/document/d/1c_39LRk1ra8tZBng671pw8TmS4u9SC9cZ0FwAgQvdZU
+	
+	
+    <!--________________________________________________________-->
+    <p>&nbsp;</p><a name="Planned Features"/><p>&nbsp;</p><hr/>
+    <div><h2>How To Guides</h2>
+    <ul>
+        <!--<li>Safari Support being tested</li>-->
+        <li>Move Settings<br>
+		https://docs.google.com/document/d/1c_39LRk1ra8tZBng671pw8TmS4u9SC9cZ0FwAgQvdZU
+		</li>
+    </ul>
+    </div>
+	
+	
+	<!--________________________________________________________-->
+    <p>&nbsp;</p><a name="Planned Features"/><p>&nbsp;</p><hr/>
+    <div><h2>Planned Features</h2>
+    <p>There are a few PSChrome features in the works and/or being considered for implementation.  Listed are a few ideas.  If you have additional ideas, comments or suggestions please email <a href="mailto:shelby@melban.me?subject=PSChrome Suggestions">shelby@melban.me</a>.  (* are just ides)</p>
+    <ul>
+        <!--<li>Safari Support being tested</li>-->
+        <li>Support for Tools 8.53</li>
+        <li>Backend Tools *
+            <ul>
+            <li>Easy viewing of process monitor logs as process runs</li>
+            <li>Trace file analysis of trace log files</li>
+			<li>Integration Broker monitoring and notification</li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+    
+    <!--________________________________________________________-->
+    <p>&nbsp;</p><a name="Bugs and Issues"/><p>&nbsp;</p><hr/>
+    <div><h2>Bugs and Issues under investigation</h2>
+    <ul>
+        <li>Issues with PeopleSoft multlanguage (non English)</li>
+        <li><span class='fixed'>Field Information button requires clicked multiple times on some pages to show information for all fields on page.</span> Fixed 2.4.11.0 (3/3/2014)</li>
+    </ul>
+    <p>Submit a bug report to <a href="mailto:shelby@melban.me?subject=PSChrome Suggestions">shelby@melban.me</a>.  Please include tools version, app version, browser version and any additional information you can provide including screen shots.</p>
+    </div>
+    
+    <!--________________________________________________________-->
+    <p>&nbsp;</p><a name="Release Notes"/><p>&nbsp;</p><hr/>
+    <div><h2>Release Notes</h2>
+    <p><b>2.4.11</b> - (03/03/2013)
+    <ul>
+        <li>PSChrome has fixed an issue that a Google Chrome bug introduced in old tools version 8.4x.  Issue involved left navigation not loading content in correct frames.
+			<br/>More information available at <a href='https://code.google.com/p/chromium/issues/detail?id=304572'>code.google.com</a>  </li>
+        <li>Field Information button now shows all fields and doesn't require multiple clicks on some pages.</li>
+    </ul>
+    <p><b>2.4.0</b> - (10/02/2013)
+    <ul>
+        <li>Added Default to Advanced Search</li>
+        <li>Added Default to Correct History Mode</li>
+        <li>Icons now reside on HTTPS server</li>
+        <li>Firefox version moved from Mozilla site to PSChrome.com.  <a href="http://www.pschrome.com/chrome/PSChrome2/AMO-to-hosted.html">More info</a></li>
+        <li>SQL Trace Log query selector</li>
+        <li>Context menu Options button<br><img src='https://www.pschrome.com/chrome/PSChrome2/features/context.menu.2.4.2.jpg' border=0'/></li>
+        <li>Auto-Refresh of Job Drill down</li>
+        <li>Job details page reorganization</li>
+    </ul>
+    <p><b>2.3.3</b> - (08/13/2013)
+    <ul>
+        <li>Updates to handle tools 8.52 page updates</li>
+        <!--<li>Corrected need to click field information button multiple times</li>-->
+        <li>Timeout Evasion now uses more commonly used refresh buttons</li>
+        <li>Simple Trace Log analysis for SQL</li>
+    </ul>
+    </p>
+    <p><b>2.2.5</b> - (07/23/2013)
+    <ul>
+        <li>Introduction of a centralized location for settings and information on PSChrome.</li>
+        <li>Options page were settings and information can be accessed</li>
+        <li>Features documentations provided at <a href='https://www.pschrome.com/chrome/PSChrome2/features.html'>https://www.pschrome.com/chrome/PSChrome2/features.html</a></li>
+    </ul>
+    </p>
+    </div>
+
+    
+    <!--________________________________________________________-->
+    <p>&nbsp;</p><a name="General Information"/><p>&nbsp;</p><hr/>
+    <div><h2>General Information</h2>
+    <p>PSChrome offers some basic features for use by developers and users enabling a simplified user experience in PeopleSoft environments.</p>
+    
+    
+    <a name="Environments List"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Environments List</h3>
+    <p>A environment is automatically added when the PSChrome icon is clicked and the current tab is a PeopleSoft environment.  Environments can be removed and renamed by clicking on the correct icon.  <!--The log icon can be clicked to access the application log if you have the <a href="#" class='anchor'>MYLIB Web Library</a> installed and configured.--></p>
+    <p><img src='https://www.pschrome.com/chrome/PSChrome2/icons/rename.png' border=0'/> Rename</p>
+    <p><img src='https://www.pschrome.com/chrome/PSChrome2/icons/delete.png' border=0'/> Remove</p>
+    <p><img src='https://www.pschrome.com/chrome/PSChrome2/icons/gear.png' border=0'/> Settings</p>
+    <p><img src='https://www.pschrome.com/chrome/PSChrome2/features/environments.2.2.5.png' border=0'/></p>
+    </div>
+    
+    
+    <a name="Version Information"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Version Information</h3>
+    <p><b>Google Chrome:</b> You can determine your PSChrome version by going to chrome://extensions<br><img src='https://www.pschrome.com/chrome/PSChrome2/features/version.information.2.2.5.png' border=0'/></p>
+    <br>
+    <p><b>Firefox:</b> You can determine your PSChrome version by going to Tools -> Add-ons (Ctrl-Shift-A) and then clicking the "Extensions" menu<br><img src='https://www.pschrome.com/chrome/PSChrome2/features/version.information.firefox.2.2.5.png' border=0'/></p>
+    </div>
+    
+    
+    
+    <!--________________________________________________________-->
+    <!--<p>&nbsp;</p><a name="Log Analyzer"/><p>&nbsp;</p><hr/>
+    <div><h2>Log Analyzer</h2>
+    <p>The previous incarnation of log analysis within PSChrome focused on analysis of log files present on the application server where the <a href="#" class='anchor'>MYLIB Web Library</a> has been installed.</p>
+    <p>The experimental Log Analyzer will go to the next level of PeopleSoft log analysis.  Options include: uploading of logs, logs using MYBLIB, in depth analysis of log details.</p>
+    
+    
+    <a name="File Lister"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>File Lister</h3>
+    <p>The file lister will show files available for analysis.  These sources can be from uploaded files or files pulled using the <a href="#" class='anchor'>MYLIB Web Library</a>.</p>
+    <ul>
+        <li>*Uploaded files will be saved into local storage space allocated to the PSChrome extension</li>
+    </ul>
+    </div>-->
+    <!--________________________________________________________-->
+    <p>&nbsp;</p><a name="Toolbar"/><p>&nbsp;</p><hr/>
+    <div><h2>Toolbar</h2>
+    <p>The toolbar provides hightly valuable information and features on every PeoleSoft page.</p>
+    <p><img src='https://www.pschrome.com/chrome/PSChrome2/features/toolbar.2.2.5.png' border=0'/></p>
+    <p>
+        <ul>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/pen_blue.png'> <img src='https://www.pschrome.com/chrome/PSChrome2/icons/pen_red.png'> Field Infromation
+            <p>To avoid having to look at each page in Application Designer the Record/Field information is provided on screen.  PeopleSoft names its fields as RECORD_NAME so that information is displayed.  When fields are shown as Radio, Selection and Checkbox there is more information provided such as translate values for Selection boxes.</p>
+            </p>
+        </li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/info.png'> Page Information
+            <p>PeopleSoft Componenet, Menu and Page information can be accessed by clicking the Page Information button.  There can be additional information such as Aplication Server, Tools Version and User when available.  Copy buttons are available for Menu, Component and Page since it is a common action.</p>
+            <p>PeopleSoft allows for a user to click Ctrl-J to view page information.  For Chrome it is pressing Ctrl-Shift-J twice.  </p>
+            </p>
+        </li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/refresh-green.png'> <img src='https://www.pschrome.com/chrome/PSChrome2/icons/refresh-red.png'> Timeout Evasion
+            <p>Often a user has multiple windows open for long periods of time.  If those windows are equiped with a refresh button then it will be used to keep the page refreshed before the normal timeout period.  It is turned on/off for each environment and not a global setting for security reasons.</p>
+            </p>
+        </li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/favorite.png'> Global Favorites
+            <p>TODO</p>
+            </p>
+        </li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/note.png'> New Window
+            <p>Some environments have the new window button turned off.  By clicking the new window icon you can open a new window or by doing a Ctrl-Click you can open just the component without any portal menu or headers.</p>
+            </p>
+        </li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/gear.png'> Settings
+            <p>If the settings icon appears there is a setting applicable to that page.  Some settings are global and some are environment specific.  They will be labeled in the settings panel that appears so you will know the difference.</p>
+            </p>
+        </li>
+        </ul>
+    </p>
+    </div>
+    
+    
+    
+    <!--________________________________________________________--
+    <p>&nbsp;</p><a name="Message Monitor"/><p>&nbsp;</p><hr/>
+    <div><h2>Message Monitor</h2>
+    <p>The PeopleSoft Message Monitor can require a great deal of time to manage when there are problems.  The help maximize your time PSChrome has a few features that are geared to help with those time consuming tasks:</p>
+    <ul>
+        <li>Auto-Refresh while messages in New, Started or Working status</li>
+    </ul>
+    <p><img src='http://melban.me/chrome/PSChrome/features/setting.message.monitor.jpg' border=0'/></p>
+    </div>
+    
+    <a name="Passive IB Monitoring"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Passive IB Monitoring</h3>
+    <p>Passive IB Monitoring is dependent on the <a href="#" class='anchor'>MYLIB Web Library</a>.</p>
+    <p>Passive IB Monitoring will check for Integration Broker messages in error that coorespond with the current browser window that is open.  If there are errors a small buble with the number of errors will be visible on the PSChrome icon within Chrome.</p>
+    <p>Setup instructions are the same as with any <a href="#" class='anchor'>MYLIB Web Library</a> functionality</p>
+    <p>The browser will check for errors using the same session/credientials contained in its browser session. The monitor will check once every 60 seconds for each environment.  This feature is turned off by default.</p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/pasive.IB.monitor.jpg' border=0'/></p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/settings.passive.ib.monitor.jpg' border=0'/></p>
+    </div>
+    
+    <a name="Resubmit Messages"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Resubmit Messages</h3>
+    <p>When viewing any Queue Level on the Message Monitor component/page there will be a "resubmit" link in the "Quick Links" column corresponding to each Service Operation or Queue depending on your currently selected grouping.</p>
+    <p>This "resubmit" link will allow a single click to resubmit all messages currently in error status in that queue.</p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/IB.resubmit.jpg' border=0'/></p>
+    </div>
+    <a name="Restart Domains"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Restart Domains</h3>
+    <p>When dealing with Integration Broker messages that are stuck you will sometimes need to restart the domains.  This process consists of many steps that need to be done in order for the best results.</p>
+    <p>On the Message Monitor page there is a "Restart Server" button which will kick off the process of steps to restart all domains that are currently setup.</p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/IB.restart.jpg' border=0'/></p>
+    </div>
+    
+    
+    <!--________________________________________________________-->
+    <a name="Process Monitor"/><p>&nbsp;</p><hr/>
+    <div><h2>Process Monitor</h2>
+    <p>The PeopleSoft Process Monitor is very click heavy.  To complete actions you normally have to click more than two times.  To quicken the interaction there are "Quick Links" added to the right of each process.  These quick links allow you to do many actions with a single mouse click.  PSChrome also automaticly will refresh your process monitor screen when there are active processes so you don't continue to click the refresh button.</p>
+    </div>
+    <a name="Auto-Refresh"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Auto-Refresh</h3>
+    <p>To remove the need of a users to repeatedly click the "refresh" button an auto-refresh functionality has been developed.  
+    When a user is on the Process Monitor component/page in PeopleSoft the refresh button will automaticly be clicked under the defined circumstance where the Processing Status meets the selected status(es).  Auto-Refresh is enabled by default with a default time.</p>
+    <p>By default when a process is unposted or in the status of Bocked, Canceled, Initiated, Processing, Pending, Queued or Restart the page will be refreshed at a set but customizable time interval.  </p>
+    <p><b>Auot-Refresh</b><br><img src='https://www.pschrome.com/chrome/PSChrome2/features/process.monitor.auto.refresh.2.2.5.jpg' border=0'/></p>
+    <p><b>Changing Process Monitor Settings </b></p>
+    <p>1. Click the Gear icon on the toolbar<br><img src='https://www.pschrome.com/chrome/PSChrome2/features/gear.settings.2.3.3.jpg' border=0'/></p>
+    <p>2. Change cnvironment settings <br><img src='https://www.pschrome.com/chrome/PSChrome2/features/process.monitor.settings.2.3.3.jpg' border=0'/></p>
+    <p>3. Set global settings<br><img src='https://www.pschrome.com/chrome/PSChrome2/features/process.monitor.global.2.3.3.jpg' border=0'/></p>
+    
+    </div>
+    
+    
+    <!--<a name="Job Details"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Job Details</h3>
+    <p>The job details page from the process monitor uses a tree rather than a scroll area which is not as useful.  The data has been converted to use a scroll area.</p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/job.drilldown.jpg' border=0'/></p>
+    </div>-->
+    
+    
+    <a name="Quick Links"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Quick Link</h3>
+    <p>The Quick Links section provides 1 click options for many common task such as restarting a failed process, canceling a process, deleting a process, holding a queued process, repost unposted content, direct links to message logs and log files.</p>
+    <ul>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/restart.png'> Restart: restart a process in No Success status</li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/stop.png'> Hold: put a queued job in hold status</li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/cancel.png'> Cancel: cancel a queued or processing process</li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/delete.png'> Delete: delete a non running  process</li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/message.jpg'> View Message Logs: drill down to the message logs page<
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/log.png'> View Log Files: drill down to the log files page</li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/repost.png'> Repost Content: respost unposted content</li>
+    </ul>
+    
+    
+    
+    </div>
+    
+    
+    <!--<a name="Repost Content"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Repost Content</h3>
+    <p>Sometime your report respository will have an issue and content will not be posted.  The process of reposting that content for each process is very time consuming.  By enabling the "Repost Content" and setting your search criteria correctly you can allow PSChrome to quickly repost all unposted content.</p>
+    <p>This option is turned off by default as it will repost all content that is unposted.</p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/proc.mon.settings.repost.content.jpg' border=0'/></p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/proc.mon.resend.content.jpg' border=0'/></p>
+    </div>-->
+    
+    
+    <!--________________________________________________________--
+    <p>&nbsp;</p><a name="Trace Log Management"/><p>&nbsp;</p><hr/>
+    <div><h2>Trace Log Management</h2>
+    <p>Trace Log Management is dependent on the <a href="#" class='anchor'>MYLIB Web Library</a>.</p>
+    <p>The Trace Log Manager is a set of features that allow a user to manage and view application trace log files that reside on the current application server.  
+    The home screen shows a list of all tracesql files listed in the current applications servers LOG folder. 
+    The Trace page can easily be bookmarked for quick access but is dependent on a user session with appropriot access to the Trace Log Management iScript in the <a href="#" class='anchor'>MYLIB Web Library</a>.
+    </p>
+    <ol type='1'>
+        <li>Open Trace Log Window by clicking "Trace"</li>
+        <li>Set trace settings for current user session if applicable</li>
+        <li>Click on the gear icon to view the log file</li>
+        <ul>
+            <li>Raw Log: View raw log data</li>
+            <li>Parse Off/On: Turn on raw log parseing to view only SQL statements</li>
+            <li>Clear: clear currently displayed contents (does not remove from server)</li>
+            <li>Delete: Removes log file from server</li>
+            <li>Tail File/Stop Tail: Start/Stops tailing of log file being monitored for updates</li>
+            <li>Reset: Starts looking at log file from the beginning and resets tail and parse settings</li>
+        </ul>
+    </ol>
+    <p><b>Trace homepage</b>: List of tracesql log files or information about why you might not be seeing files.<br/>
+    <img src='http://melban.me/chrome/PSChrome/features/trace.home.jpg' border=0'/></p>
+    <p><b>Trace Settings</b>: On the fly setting of Trace settings<br/>
+    <img src='http://melban.me/chrome/PSChrome/features/trace.settings.jpg' border=0'/></p>
+    <p><b>View Trace Files</b><br/>
+    <img src='http://melban.me/chrome/PSChrome/features/trace.logs.jpg' border=0'/></p>
+    
+    </div>
+    <a name="SQL Trace Parser"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>SQL Trace Parser</h3>
+    <p><b>Raw Trace File</b>: View of raw log data<br/>
+    <img src='http://melban.me/chrome/PSChrome/features/trace.raw.jpg' border=0'/></p>
+    <p><b>Trace Parsing On</b>: SQL statements parsed out of raw log file<br/>
+    <img src='http://melban.me/chrome/PSChrome/features/trace.parse.on.jpg' border=0'/></p>
+    </div>
+    
+    <a name="Log Trailing"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Log Trailing</h3>
+    <p>Log tailing enables a user to create breakepoints or activly monitor a log file.  The log information will be requested on a frequent basis and will only return new information to minimize server load and processing time.</p>
+    </div>-->
+    
+    <!--________________________________________________________-->
+    <p>&nbsp;</p><a name="Trace Log Analysis"/><p>&nbsp;</p><hr/>
+    <div><h2>Trace Log Analysis</h2>
+    
+    <p>The Trace Logs that are generated by PeopleSoft are very useful but complex and messing.  By pasting the text of your trace log into the text field on the options page under "Log Analysis" you can extract the SQL commands from the log file contents.</p>
+    <p>After pasting the trace log into the text box click the "Analyze" button to generate the SQL.</p>
+    <img src='https://www.pschrome.com/chrome/PSChrome2/features/Log.Analysis.2.3.3.jpg' border=0'/>
+    </div>
+    
+    
+    
+    
+    <!--________________________________________________________-->
+    <p>&nbsp;</p><a name="User Experience"/><p>&nbsp;</p><hr/>
+    <div><h2>User Experience</h2>
+    <p>General styling changes, "My Favorites" enhancements and Timeout Evasion have been added to enhance the user experience.</p>
+    </div>
+    
+    <a name="Content References Spacing"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Content References Spacing</h3>
+    <p>PSChrome slightly alters the spacing of content references in the navigation window so links are sepereated for easier reading.</p>
+    <img src='https://www.pschrome.com/chrome/PSChrome2/features/experience.spacing.2.2.5.jpg' border=0'/>
+    </div>
+    
+    <!--<a name="Mini Toolbar"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Mini Toolbar</h3>
+    <p>On PeopleSoft pages a Mini Toolbar will appear at the top of the page.</p>
+    <ul>
+        <li>Highlight fields and display information</li>
+        <li>Page information</li>
+        <li>View Logs</li>
+    </ul>
+    <p><b>Toolbar</b><br/><img src='http://melban.me/chrome/PSChrome/features/mini.toolbar.jpg' border=0'/></p>
+    <p><b>Field Information</b><br/><img src='http://melban.me/chrome/PSChrome/features/mini.toolbar.fields.jpg' border=0'/></p>
+    <p><b>Page Information</b><br/><img src='http://melban.me/chrome/PSChrome/features/mini.toolbar.info.jpg' border=0'/></p>
+    </div>-->
+    
+    <a name="My Favorites Enhancements"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>My Favorites Enhancements</h3>
+    <p>The "My Favorites" built in functionality in PeopleSoft is time saving although it make it frustrating sometime when you would like to know where the content reference actually resides.
+    PSChrome will track your favorites everytime you open the "My Favorites" folder.  When those favorited content references are present in your normal portal navigation browsing so when you navigate your the portal navigation they will have a different font color and size so they stand out. 
+    </p>
+    <p>The drill down icon (delete icon) will remove the "My Favorites" navigation folder and route you directly to the navigation folder for the selected content refrence.</p>
+    <p><b>Drill Down</b><br/>
+    <img src='http://melban.me/chrome/PSChrome/features/fav.myfavorites.jpg' border=0'/>
+    <img src='http://melban.me/chrome/PSChrome/features/fav.drill.jpg' border=0'/></p>
+    <p><b>Text Styling Change</b>
+    <img src='http://melban.me/chrome/PSChrome/features/fav.text.size.jpg' border=0'/>    </p>
+    </div>
+    
+    
+    <a name="General Settings"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>General Settings</h3>
+    <p>There are multiple general settings that can widly apply to each environment.</p>
+    </div>
+    
+    <a name="Timeout Evasion"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Timeout Evasion</h3>
+    <p>Timeout Evasion works by using the existing "Refresh" button on PeopleSoft pages.  Timeout evasion begins 60 seconds before the timeout warning message would appear.  It gives you 30 seconds of warning with a countdown before the page refresh begins.  Clicking the icon will enable or disable the feature for the current environment only.</p>
+    <img src='https://www.pschrome.com/chrome/PSChrome2/features/timeout.evasion.timer.2.2.5.jpg' border=0'/>
+    <ul>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/refresh-green.png' border=0'/> Timeout Evasion <b>ON</b></li>
+        <li><img src='https://www.pschrome.com/chrome/PSChrome2/icons/refresh-red.png' border=0'/> Timeout Evasion <b>OFF</b></li>
+    <img src='https://www.pschrome.com/chrome/PSChrome2/features/timeout.evasion.refresh.2.2.5.jpg' border=0'/>
+    </div>
+    
+    <a name="Correct History"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Correct History mode by default</h3>
+    <p>The Correct History checkbox will be checked when available so that when you enter into a component it will automaticly be in correct history mode.  This only applies on the search page and if you need to go into a different mode you can click the button at the bottom of the page.</p>
+    </div>
+    
+    <a name="Advanced Search"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Advanced Search by default</h3>
+    <p>If the Advanced Search link is shown on the search page it will be clicked for you.</p>
+    </div>
+    
+    
+    
+    <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+    <!--________________________________________________________--
+    <p>&nbsp;</p><a name="User Profile"/><p>&nbsp;</p><hr/>
+    <div><h2>User Profile</h2>
+    <p>Not much time is spent managing User Profiles unless that is your job.  Generating password and managing roles is a main task for security administrators.
+    </p>
+    </div>
+    <a name="Generate Passwords"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Generate Passwords</h3>
+    <p>The "Generate Pass" button the the User Profile component/page will generate a random password based on the defined password length and setting to use special characters.</p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/settings.user.pass.generate.jpg' border=0'/></p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/user.profile.gen.password.jpg' border=0'/></p>
+    </div>
+    <a name="Role Group Manager"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Role Group Manager</h3>
+    <p>Managing the roles of a new user is made much easier with Role Groups.  By creating a Role Group one can easily apply a group to a user with a few clicks.  Role groups are shared across all environments.</p>
+    <div>
+        <div style='float:left;width:230px' >
+            <ol type='1'><h4>Create Role Group</h4>
+                <li>Enter Role Name in text area</li>
+                <li>User 'auto create' button to add all current roles to Role Group or manually add role names to text box and click 'add' button</li>
+                <li>Click 'save' button</li>
+            </ol>
+        </div>
+        <div style='float:left;width:200px' >
+            <ol type='1'><h4>Edit Role Group</h4>
+                <li>Select Role Group from dropdown list</li>
+                <li>Click 'edit' button</li>
+                <li>Manage roles (delete/add)</li>
+                <li>Click 'save' button</li>
+            </ol>
+        </div>
+        <div style='float:left;width:200px' >
+            <ol type='1'><h4>Delete Role Group</h4>
+                <li>Select Role Group from dropdown list</li>
+                <li>Click 'edit' button</li>
+                <li>Click 'delete' button</li>
+            </ol>
+        </div>
+    </div>
+    <p><img src='http://melban.me/chrome/PSChrome/features/settings.user.role.groups.jpg' border=0'/></p>
+    <p><img src='http://melban.me/chrome/PSChrome/features/role.group.jpg' border=0'/></p>
+    </div>-->
+    
+    <!--________________________________________________________--
+    <p>&nbsp;</p><a name="MYLIB Web Library"/><p>&nbsp;</p><hr/>
+    <div><h2>MYLIB Web Library</h2>
+    <p><a href="http://melban.me/peoplesoft-services/mylib-peoplesoft-web-library/">Download MYLIB Web Library</a></p>
+    <p>
+        <ul type='1'>
+        <li>Import MYLIB project</li>
+        <li>On your Permission List of choice navigate to the "Web Libraries" tab and give full access to the need iScript(s) in the WEBLIB_MYLIB Web Library.</li>
+        <li>Enable functionality such as <a href="#" class='anchor'>Trace Log Management</a> or <a href="#" class='anchor'>Passive IB Monitoring</a></li>
+        </ul>
+    </p>
+    </div>
+    <a name="Concurrent Processor (MYLIB)"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Concurrent Processor (MYLIB)</h3>
+    <p>More information is avaialbe by viewing its web page at <a href='http://melban.me/2011/05/10/concurrent-processing-with-peoplesoft/'>Concurrent Processor</a>.</p>
+    <p>Sample from the website: "<i>With the absence of threading, forking and event driven processing in PeopleSoft I’ve been troubled with processing large sets of data. On many occasions I’ve needed to do the same process over and over but am frustrated with the amount of time needed to complete the task. In the past I’ve create a process that can be started with a particular set of parameters to split up the amount of work that needs to be completed. This generally works pretty well but you can end up with one process that has 10k rows to process and another with just 400. This isn’t very efficient. To get around this issue I’ve created a neat little Application Package to help initiate a set number of process and a mechanism for processing a dataset across all those processes....</i>"</p>
+    </div>
+    <a name="Passive IB Monitoring (MYLIB)"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Passive IB Monitoring (MYLIB)</h3>
+    <p>Passive IB Monitoring will monitor the views PSIBPUBCON_VW, PSIBSUBCON_VW, and PSIBPUBHDR_VW where the message status is in Error, New or Edited.  This data will be utilized by the Passive IB Monitoring functionality withing PSChrome.</p>
+    </div>
+    <a name="Trace Log Management (MYLIB)"/><p>&nbsp;</p>
+    <div class='sub_info'><h3>Trace Log Management (MYLIB)</h3>
+    <p>Trace Log Management is used by PSChrome to view the Application Trace Logs available on a PeopleSoft appliation server. </p>
+    </div>-->
+    
+</div>
+
+<div class='menu'>
+<ul type='none'>
+    <h2><a href="#top">PSChrome Index</a></h2>
+    <li><a href="#" class='anchor'>Planned Features</a></li>
+    <li><a href="#" class='anchor'>Bugs and Issues</a></li>
+    <li><a href="#" class='anchor'>Release Notes</a></li>
+    <li><a href="#" class='anchor'>General Information</a>
+        <ul>
+            <li><a href="#" class='anchor'>Environments List</a></li>
+            <li><a href="#" class='anchor'>Version Information</a></li>
+        </ul>
+    </li>
+    <!--<li><a href="#" class='anchor'>Log Analyzer</a>
+        <ul>
+            <li><a href="#" class='anchor'>File Lister</a></li>
+            <li><a href="#" class='anchor'>Upload Logs</a></li>
+        </ul>
+    </li>-->
+    <li><a href="#" class='anchor'>Toolbar</a><!--
+        <ul>
+            <li><a href="#" class='anchor'>Field Information</a></li>
+            <li><a href="#" class='anchor'>Page Information</a></li>
+            <li><a href="#" class='anchor'>Timeout Evasion</a></li>
+            <li><a href="#" class='anchor'>Global Favorites</a></li>
+            <li><a href="#" class='anchor'>New Window</a></li>
+            <li><a href="#" class='anchor'>Settings</a></li>
+        </ul>-->
+    </li>
+    <!--<li><a href="#" class='anchor'>Message Monitor</a>
+        <ul>
+            <li><a href="#" class='anchor'>Passive IB Monitoring</a></li>
+            <li><a href="#" class='anchor'>Resubmit Messages</a></li>
+            <li><a href="#" class='anchor'>Restart Domains</a></li>
+        </ul>
+    </li>-->
+    <li><a href="#" class='anchor'>Process Monitor</a>
+        <ul>
+            <li><a href="#" class='anchor'>Auto-Refresh</a></li>
+            <!--<li><a href="#" class='anchor'>Job Details</a></li>-->
+            <li><a href="#" class='anchor'>Quick Links</a></li>
+            <!--<li><a href="#" class='anchor'>Repost Content</a></li>-->
+        </ul>
+    </li>
+    <li><a href="#" class='anchor'>Trace Log Analysis</a>
+        <!--<ul>
+            <li><a href="#" class='anchor'>SQL Trace Parser</a></li>
+            <li><a href="#" class='anchor'>Log Trailing</a></li>
+        </ul>-->
+    </li>
+    <li><a href="#" class='anchor'>User Experience</a>
+        <ul>
+            <li><a href="#" class='anchor'>Content References Spacing</a></li>
+            <li><a href="#" class='anchor'>My Favorites Enhancements</a></li>
+            <li><a href="#" class='anchor'>General Settings</a>
+            
+        <ul>
+            <li><a href="#" class='anchor'>Timeout Evasion</a></li>
+            <li><a href="#" class='anchor'>Correct History</a></li>
+            <li><a href="#" class='anchor'>Advanced Search</a></li>
+        </ul>
+            </li>
+        </ul>
+    </li>
+    <!--<li><a href="#" class='anchor'>User Profile</a>
+        <ul>
+            <li><a href="#" class='anchor'>Generate Passwords</a></li>
+            <li><a href="#" class='anchor'>Role Group Manager</a></li>
+        </ul>
+    </li>-->
+    <!--<li><a href="#" class='anchor'>MYLIB Web Library</a>
+        <ul>
+            <li><a href="#" class='anchor'>Concurrent Processor (MYLIB)</a></li>
+            <li><a href="#" class='anchor'>Passive IB Monitoring (MYLIB)</a></li>
+            <li><a href="#" class='anchor'>Trace Log Management (MYLIB)</a></li>
+        </ul>
+    </li>-->
+</ul>
+</div>
+<script>
+<!--
+    anchors = document.getElementsByClassName( 'anchor' );
+    for( x in anchors )
+    {
+        anchors[x].href = '#' + anchors[x].innerHTML;
+    }
+-->
+</script>
+<!-- ClickDesk Live Chat Service for websites -->
+<script type='text/javascript'>
+var _glc =_glc || []; _glc.push('all_ag9zfmNsaWNrZGVza2NoYXRyDgsSBXVzZXJzGK-N8wIM');
+var glcpath = (('https:' == document.location.protocol) ? 'https://my.clickdesk.com/clickdesk-ui/browser/' : 
+'http://my.clickdesk.com/clickdesk-ui/browser/');
+var glcp = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+var glcspt = document.createElement('script'); glcspt.type = 'text/javascript'; 
+glcspt.async = true; glcspt.src = glcpath + 'livechat-new.js';
+var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(glcspt, s);
+</script>
+<!-- End of ClickDesk -->
+</body>
+</html>

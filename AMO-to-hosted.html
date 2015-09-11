@@ -1,0 +1,149 @@
+<html>
+<head>
+    <title>Change PSChrome Firefox Sources</title>
+    <style>
+        p {
+            font-size:17px;
+        }
+    </style>
+  <LINK REL="SHORTCUT ICON" HREF="https://www.pschrome.com/chrome/PSChrome2/PSChrome2.ico" />
+    <script>
+    
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-405173-30']);
+	_gaq.push(['_trackPageview']);
+    function Init()
+    {
+        if( document.location.toString().indexOf('pschrome.com') > -1 )
+        {
+            initGoogle();
+        }
+    }
+    /** Only load if needing to do an update    **/
+    function initGoogle()
+    {
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = 'https://ssl.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    }
+    </script>
+</head>
+<body onload='Init();'>
+
+
+
+<p style="font-size:20px; color:black; background-color:#f0f0f0; padding:15px; margin: 5px; 
+    border-style:solid; border-color:#a0a0a0; width:650px; ">
+    Firefox Users ONLY<br>
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *<br>
+    We apologize that you will need to change your installed PSChrome Firefox<br>
+    installation source.  Instructions below for removing and re-adding<br>
+    PSChrome without losing settings.
+    </p>
+
+<h2>Overview</h2>
+
+<p><ul>
+    <li>The AMO (Addons.Mozilla.Org) team has an approval process for all Firefox Addons that takes weeks to be processed.</li>
+    <li>I'm now hosting the application on a secure server, replacing the AMO hosted application due to these long time delays.</li>
+    <li>Please use the procedures below to remove the old version and install the new version</li>
+    
+</ul></p>
+
+
+<h2>Procedures</h2>
+
+<ul>
+
+    <li>
+        <p><b>Open PSChrome Options and make a copy of your environment settings</b></p>
+        <ol>
+            <li>
+                <p>Go to the login page of and PeopleSoft page</p>
+            </li>
+            <li>
+                <p>Click on the settings link under Environments</p>
+                <p><img src='./ScreenShots/AMO/settings.link.jpg'/></p>
+            </li>
+            <li>
+                <p>Click the checkbox for "View Settings data"</p>
+            </li>
+            <li>
+                <p>Copy the text data revealed when checking the box</p>
+            </li>
+            <li>
+                <p>Paste the content into a new text document</p>
+                <p><img src='./ScreenShots/AMO/settings.tab.jpg'/></p>
+            </li>
+            
+        </ol>
+    </li>
+    <li>
+        <p><b>Uninstall PSChrome</b></p>
+        <ol>
+            <li>
+                <p>Navigate to Tools -> Add-Ons</p>
+                <p><img src='./ScreenShots/AMO/01.addons.jpg'/></p>
+            </li>
+            <li>
+                <p>Remove the old PSChrome Addon</p>
+                <p><img src='./ScreenShots/AMO/remove.old.PSChrome.jpg'/></p>
+            </li>
+            <li>
+                <p>Close and Restart Firefox</p>
+            </li>
+        </ol>
+    </li>
+    <li>
+        <p><b>Install New PSChrome</b></p>
+        <ol>
+            <li>
+                <p>Navigate to <a href="http://pschrome.com/chrome/PSChrome2/features.html" target="_blank">pschrome.com/chrome/PSChrome2/features.html</a></p>
+            </li>
+            <li>
+                <p>Click the Firefox icon to install</p>
+                <p><img src='./ScreenShots/AMO/installFF.jpg'/></p>
+            </li>
+        </ol>
+    </li>
+    <li>
+        <p><b>Import environment settings</b></p>
+        <ol>
+            <li>
+                <p>Go to the login page of and PeopleSoft page</p>
+            </li>
+            <li>
+                <p>Click on the settings link under Environments</p>
+                <p><img src='./ScreenShots/AMO/settings.link.jpg'/></p>
+            </li>
+            <li>
+                <p>Paste the setting you earlier coppied out of the PSChrome settings tab</p>
+            </li>
+            <li>
+                <p>Click the update button and then conform you want to replace the existing environment settings.</p>
+                <p><img src='./ScreenShots/AMO/import.settings.jpg'/></p>
+            </li>
+        </ol>
+    </li>
+    <li>
+        <p><b>Enjoy PSChrome</b></p>
+        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+    </li>
+
+</ul>
+
+<!-- ClickDesk Live Chat Service for websites -->
+<script type='text/javascript'>
+var _glc =_glc || []; _glc.push('all_ag9zfmNsaWNrZGVza2NoYXRyDgsSBXVzZXJzGK-N8wIM');
+var glcpath = (('https:' == document.location.protocol) ? 'https://my.clickdesk.com/clickdesk-ui/browser/' : 
+'http://my.clickdesk.com/clickdesk-ui/browser/');
+var glcp = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+var glcspt = document.createElement('script'); glcspt.type = 'text/javascript'; 
+glcspt.async = true; glcspt.src = glcpath + 'livechat-new.js';
+var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(glcspt, s);
+</script>
+<!-- End of ClickDesk -->
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <script type="text/javascript" src="kango-ui/kango_api.js"></script>
+    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.11.4.js"></script>
+    <script type="text/javascript" src="PSChrome2.js"></script>
+    <script type="text/javascript" src="traceLog.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/start/jquery-ui.css" />
+    
+    <style>
+    .hide { display:none }
+    .settings_label {
+        width: 250px;
+        text-align: right;
+        padding: 0px 20px 0px 0px;
+    }
+    .featuresGroups  li {
+        font-weight: bold;
+    }
+    .featuresGroups  li p, .featuresGroups  li div, .featuresGroups  li span {
+        font-weight: normal;
+    }
+    .generalHeading {
+        font-weight: bold;
+        font-size: 14px;
+        color: black;
+    }
+    #tabs-general {
+        width: 650px;
+    }
+    div, p, span {
+        font-size: 13px;
+    }
+    .group_header {
+        font-size:13px;
+        font-weight:bold;
+    }
+    html, body{height:100%;} 
+    
+    /* end hack */ 
+    #loading {
+    position:absolute; 
+    text-align:center;  layer-background-color:white; vertical-align:middle;
+    left:10%; 
+    top:10%; 
+    background-color:#C0C0C0;
+    height:75%; 
+    width:75%;
+    }
+    #loading td { color: white; font-size:50px; font-weight:bold;}
+    </style>
+    
+</head>
+<body>
+
+
+<table id="loading"><tr><td>Loading ...<br>Please Wait</td></tr></table>
+<div id="tabs" class='hide'>
+  <ul>
+    <li><a href="#tabs-general">General</a></li>
+    <li><a href="#tabs-settings">Settings</a></li>
+    <li><a href="#tabs-environments">Environments</a></li>
+    <!--<li><a href="#tabs-global-favorites">Global Favorites</a></li>-->
+    <li><a href="#tabs-logs">Log Analysis</a></li>
+    <li><a href="#tabs-help">Help</a></li>
+  </ul>
+  <div id="tabs-general">
+    <p class='generalHeading'>** WRITE A REVIEW **</p>
+    <p class='chrome hide'>Please help by writing a review on the <a href='https://chrome.google.com/webstore/detail/pschrome/cpgoncheakfjhldfbebekijoeaabnfeb/reviews'>Google Webstore</a>
+    <hr>
+    </p>
+    <p class='generalHeading'>What is PSChrome</p>
+    <p>PSChrome is a browser extension/add-on that works with both Google Chrome and Mozilla Firefox.  PSChrome adds usability features to enhance the user experience of both technical and functional users.  By adding visual tweeks and automating commons tasks, PSChrome will be a resource you won't want to live without.</p>
+    <hr>
+    <p class='generalHeading'>How can it help me</p>
+    <p><ul>
+        <li>Additional on page information</li>
+        <li>Process Monitor enhanced functionality</li>
+        <li>Navigation enhancements</li>
+    </ul></p>
+    <hr>
+    <p class='generalHeading'>Have an idea ???</p>
+    <p>Please email <a href="mailto:shelby@melban.me?subject=PSChrome Idea">shelby@melban.me</a></p>
+    <p></p>
+  </div>
+  <div id="tabs-settings">
+    <p class='group_header'>Global Settings</p>
+    <table>
+        <tbody>
+            <tr>
+                <td class='settings_label'>Enable Debug Logs</td>
+                <td><input type='checkbox' value='checked' id='setting_debug_logs'></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p class='group_header'>Process Monitor Settings</p>
+    <table>
+        <tbody>
+            <tr>
+                <td class='settings_label'>Default Refresh Time:</td>
+                <td><input type='text' value='' id='settings_process_monitor_default_refresh'> <input type='button' value='set' id='settings_process_monitor_default_refresh_button'></td>
+            </tr>
+            <tr>
+                <td class='settings_label'>Auto-Refresh Enabled:</td>
+                <td><input type='checkbox' value='checked' id='setting_proc_mon_refresh_enabled'>
+                <div id='setting_procMonRefreshContainer'></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id='globalSettingsDynamic'></div>
+    <hr>
+    <p><input type='checkbox' id='viewSettings'><label for='viewSettings'>View Settings data</label>
+    
+    </p>
+    <div class='hide' id='jsonSettingsDiv'>
+        <p><textarea id='jsonSettingsData' cols=120 rows=15>settings data</textarea></p>
+        <p><span style='color:red; font-weight: bold;'>*** Very Dangerous.  Proceed with caution. ***</span>
+        <br>
+        <input type='button' value='Update' id='jsonSettingsSave'> </p>
+        
+    </div>
+    </div>
+    <div id="tabs-environments">
+        <p>Below are the PeopleSoft environments that we have discovered.  By clicking on an environment you'll be able to change the settings available on an individual environment basis.</p>
+        <p>Process monitor global settings, refresh time settings and other options are located under the "Settings" tab</p>
+        <div id="environmentContainer"></div>
+    </div>
+  <div id="tabs-global-favorites" class='hide'>
+    <div id='global_favotires_edit'>This is the area where you would create a new one</div>
+    <hr>
+    <div id='global_favotires_list'>
+        <h3>Global Favorites</h3>
+    </div>
+  </div>
+  <div id="tabs-help">
+    <h3>PSChrome Features:</h3>
+    <p><a href='http://pschrome.com/chrome/PSChrome2/features.html'>http://pschrome.com/chrome/PSChrome2/features.html</a></p>
+    <hr>
+    <a name='releaseNotes'/>
+    <h3>Release Notes</h3>
+    <p><b>2.4.11</b> - (03/03/2013)
+    <ul>
+        <li>PSChrome has fixed an issue that a Google Chrome bug introduced in old tools version 8.4x.
+		<br/>Issue involved left navigation not loading content in correct frames.
+			<br/>More information available at <a href='https://code.google.com/p/chromium/issues/detail?id=304572'>code.google.com</a>  </li>
+        <li>Field Information button now shows all fields and doesn't require multiple clicks on some pages.</li>
+    </ul>
+    <p><b>2.4.10</b> - (10/02/2013)
+    <ul>
+        <li>Added Default to Advanced Search</li>
+        <li>Added Default to Correct History Mode</li>
+        <li>Auto-Refresh of Job Drill down</li>
+        <li>Job details page reorganization</li>
+    </ul>
+    <p><b>2.4.5</b> - (08/22/2013)
+    <ul>
+        <li>Icons now reside on HTTPS server</li>
+        <li>Firefox version moved from Mozilla site to PSChrome.com</li>
+        <li>Context menu Options button<br><img src='http://pschrome.com/chrome/PSChrome2/features/context.menu.2.4.2.jpg' border=0'/></li>
+        <li>SQL Trace Log query selector</li>
+    </ul>
+    <p><b>2.3.3</b> - (08/13/2013)
+    <ul>
+        <li>Updates to handle tools 8.52 page updates</li>
+        <li>Timeout Evasion now uses more commonly used refresh buttons</li>
+        <li>Simple Trace Log analysis for SQL</li>
+    </ul>
+    </p>
+    <p><b>2.2.5</b> - (07/23/2013)
+    <ul>
+        <li>Introduction of a centralized location for settings and information on PSChrome.</li>
+        <li>Options page were settings and information can be accessed</li>
+        <li>Features documentations provided at <a href='http://pschrome.com/chrome/PSChrome2/features.html'>http://pschrome.com/chrome/PSChrome2/features.html</a></li>
+    </ul>
+    </p>
+    
+  </div>
+  <div id="tabs-logs" class='hide'>
+    <h3>Log Analysis</h3>
+    <p>A more productive log analysis will be implemented in the future.  For not this SQL Only tool will take Trace Log SQL and convert it into the actual queries run against the database.
+        If you are interested in a more in depth backend log analysis system please email me at <a href="mailto:shelby@melban.me?subject=PSChrome Advanced Trace Log">shelby@melban.me</a> to discuss.
+    </p>
+    <input type='button' id='trace_log_doAnalysis' value='Analyze'>
+    <input type='checkbox' id='trace_selects'><label for='trace_selects'>Selects</label>
+    <input type='checkbox' id='trace_inserts'><label for='trace_inserts'>Inserts</label>
+    <input type='checkbox' id='trace_updates'><label for='trace_updates'>Updates</label>
+    <input type='checkbox' id='trace_deletes'><label for='trace_deletes'>Deletes</label>
+    <input type='checkbox' id='trace_truncates'><label for='trace_truncates'>Truncates</label>
+    <br/>
+    <!--
+        Need more options like checkbox to show only selected SQL commands (insert/update/select/delete/truncate
+    -->
+    <textarea spellcheck='false' cols=40 rows=5 id='traceLogManual'></textarea>
+    
+    <a href='#' id="trace_reset">clear</a>
+    <pre id="myTrace" ></pre>
+
+
+
+
+
+
+  </div>
+</div>
+</body>
+</html>

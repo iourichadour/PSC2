@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Trank you for installing or updating PSChrome</title>
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-405173-30']);
+
+function init()
+{
+    try
+    {
+        vers = document.location.toString().split("?")[1].split("&");
+        var versionMajor, versionMinor, browser, newInstall;
+        for( i in vers )
+        {
+            keyValue = vers[i].split("=");
+            if( keyValue[1] )
+            {
+                switch( keyValue[0] )
+                {
+                    case "browser":
+                        browser = keyValue[1];
+                        break;
+                    case "versionMinor":
+                        versionMinor = keyValue[1];
+                        document.getElementById( 'minorVersion' ).innerHTML = versionMinor;
+                        break;
+                    case "versionMajor":
+                        versionMajor = keyValue[1];
+                        break;
+                    case "install":
+                        newInstall = keyValue[1];
+                        break;
+                }
+            }
+        }
+        _gaq.push([ '_trackEvent', 'PSChrome Version', versionMinor, browser ]);
+        if( versionMajor )
+            _gaq.push([ '_trackEvent', 'PSChrome Version', versionMajor, browser ]);
+        if( newInstall )
+            _gaq.push([ '_trackEvent', 'PSChrome Install', versionMinor, browser ]);
+        initGoogle();
+        try{setTimeout(function(){window.close();},1000);}catch(e){}
+    } catch( e ){
+        //console.log( e.toString() );
+    }
+}
+
+/** Only load if needing to do an update    **/
+function initGoogle()
+{
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = 'https://ssl.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+}
+</script>
+</head>
+<body onload='init()'>
+<div>
+PSChrome has been updated to version <span id='minorVersion'></span>.  
+</div>
+<div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "version": "2.4.13.5",
+  "name": "PSChrome", 
+  "description": "Usability features without PeopleSoft customizations. Useful for technical and functional users.",
+  "creator": "Shelby Melban",
+  "homepage_url": "https://www.pschrome.com/chrome/PSChrome2/features.html",
+  "background_scripts": [ "ga.js", "PSChrome2.js", "jquery-1.11.2.min.js" ], 
+  "content_scripts": [ "PSChrome2.js" ], 
+  "browser_button": {
+    "caption": "PSChrome 2.4", 
+    "tooltipText": "PSChrome 2.4.11", 
+    "icon": "icons/button.png",
+	"popup": {
+	  "url": "popup.html",
+	  "width": 350,
+	  "height": 400
+	}
+  }
+  ,"options_page": "options.html"
+  ,"content_security_policy": "script-src 'self' https://*.google-analytics.com 'unsafe-eval'; object-src 'self'"
+  ,"context_menu_item": {
+    "caption": "Options"
+  }
+}

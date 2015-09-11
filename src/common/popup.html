@@ -1,0 +1,111 @@
+<html>
+<head>
+    <script type="text/javascript" src="kango-ui/kango_api.js"></script>
+    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="PSChrome2.js"></script>
+    <style>
+    #env_label {
+        font-size: 36px;
+        font-weight: bold;
+    }
+    #ENV_LIST a:link, #ENV_LIST a:visited, #ENV_LIST a:active, #ENV_LIST a:hover{
+        font-size:17px;
+        color:blue;
+        text-decoration:none;
+        font-weight:bold;
+        line-height:1.3;
+    }
+    #ENV_LIST a:hover{
+        color:red;
+    }
+    a:link, a:visited, a:active, a:hover{
+        font-size:17px;
+        color:blue;
+        text-decoration:none;
+        font-weight:bold;
+        line-height:1.3;
+    }
+    a:hover{
+        color:red;
+    }
+    .features, .features a:link, .features a:visited, .features a:active, .features a:hover {
+        font-size: 14px;
+    }
+    body{
+        margin: 3px;
+        padding: 0px;
+        width: 350px;
+    }
+    .hide { display:none }
+    .news li {
+        position: relative;
+        left: -20px;
+    }
+	.notification {color:red}
+    </style>
+    
+</head>
+<body>
+
+<p class='hide' style="color:red;">
+    <b>IMPORTANT: <a href="http://www.pschrome.com/chrome/PSChrome2/AMO-to-hosted.html" target="_blank">Firefox Users Click Here</a></b>
+</p>
+
+<div id='showNotify' class='hide'>
+	<h2 class='notification'>Navigation Bug Fixed</h2>
+	PSChrome has fixed an issue that a Google Chrome bug introduced in old tools version 8.4x.  Issue involved left navigation not loading content in correct frames.
+	   <br/>More information available at <a href='https://code.google.com/p/chromium/issues/detail?id=304572' target="_blank">code.google.com</a>
+	   <hr/>
+</div>
+<p class='env_label'>Environments:</p>
+<p id='ENV_LIST' style='width:250px;'>
+</p>
+
+
+
+<!--<button type="button" onclick="kangoPopup.close()">Close popup</button>-->
+<div id='settingsParent'></div>
+
+<!--
+<hr/>
+<div id='settingsGlobal'>
+    <a href='' id='edit_globalSettings'><img border=0 id='icons_globalSettings'/> Global Settings</a>
+</div>
+-->
+<!--<hr/>
+<div><a href="#" id='opentab_pschrome' class='hide'><img src="http://pschrome.com/chrome/PSChrome2/images/5stars.jpg" border="0" width='55'/> Please Rate Us</a></div>
+-->
+<hr/>
+<b>Seeking developers and sponsors interested in working on PSChrome and other possible feature expansions.  Email <a href="#" id='opentab_email_tools_version2'>Shelby@Melban.me</a> for information.
+</hr>
+<div class='features'>
+<b>News 2.4.13 (2014.10.30)</b>
+<ul class='news'>
+  <li>Looking for public 8.52 - 8.54 PeopleTools environments to fix known bugs.  Please email <a href="#" id='opentab_email_tools_version'>Shelby@Melban.me</a> with information.</li>
+  <li>Update: PSChrome has 'further' fixed an issue that a Google Chrome bug introduced in old tools version 8.4x.  Issue involved left navigation not loading content in correct frames.</li>
+</ul>
+<a href="http://pschrome.com/chrome/PSChrome2/features.html" target="_blank">Features</a>
+ - <a href="" id='optionsLink' >Options</a>
+<span class='chrome hide'> - <a href="https://chrome.google.com/webstore/detail/pschrome/cpgoncheakfjhldfbebekijoeaabnfeb/reviews" id='rateChromeLink' target="_blank">Write a Review</a></span>
+</div>
+<hr/>
+<div style='size:13px;'>
+
+
+<div>
+    <a href="#" id='opentab_facebook'><img src="http://pschrome.com/chrome/PSChrome2/images/fbook.png" border="0"/></a>
+    <a href="#" id='opentab_googleplus'><img src="http://pschrome.com/chrome/PSChrome2/images/gplus.png" border="0"/></a>
+    <a href="#" id='opentab_linkedin'><img src="http://pschrome.com/chrome/PSChrome2/images/linkedin.png" border="0"/></a>
+    <br/>
+    <a href="#" id='opentab_suggestions'>Suggestion?</a><br/>
+    <!--
+    <a href="#" id='opentab_googlegroup' class='hide'>Join our Google Group</a>
+    <br/>
+    <a href="#" id='opentab_github' class='hide'>Submit Issue</a>
+    <br/>-->
+    <a href="#" id='opentab_google_webstore'>Suggest to a friend</a><br/>
+    <a href="#" id='opentab_live_chat'>Live Chat</a>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "id": "{801D8CB0-6A00-11E1-8C67-00216A8E798A}"
+  , "update_path_url": "https://www.pschrome.com/chrome/PSChrome2/versions/"
+  , "name": "PSChrome for Firefox"
+  ,"context_menu_item": {
+    "caption": "PSChrome Options"
+    
+  }
+}
